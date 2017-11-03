@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void selection_sort(int *mas, unsigned int n){  
+void insertion_sort(int *mas, unsigned int n){  
    for(int i=0; i < n; i++){
        for(int j=i; j>0 ; j--){
            if(mas[j-1]>mas [j]){
@@ -30,7 +30,7 @@ int main()
             return -1;
         }
     } 
-    selection_sort (mas,n);
+    insertion_sort (mas,n);
     for(unsigned int i=0; i<n; i++){
         cout << mas[i] << " ";
     }
