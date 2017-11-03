@@ -15,7 +15,6 @@ void selection_sort(int *mas, unsigned int n){
 }
 
 int main()
-
 {
   unsigned int n;                            
     cin>> n;
@@ -30,9 +29,7 @@ int main()
             cout<<"ERROR"<<endl;
             return -1;
         }
-    }
-
- 
+    } 
     selection_sort (mas,n);
     for(unsigned int i=0; i<n; i++){
         cout << mas[i] << " ";
