@@ -14,26 +14,29 @@ void insertion_sort(int *mas, unsigned int n){
     }
 }
 
-int main()
-{
-    unsigned int n;
-    cin>> n;
-    cin.get();
-
-    int *mas = new int [n];
-    string stroka;
-    getline (cin, stroka);
-    istringstream stream (stroka);
-    for (unsigned int i=0; i<n;i++){
-        if(!(stream>> mas[i])){
-            cout<<"ERROR"<<endl;
-            return -1;
-        }
-    }
-    insertion_sort (mas,n);
-    for(unsigned int i=0; i<n; i++){
-        cout << mas[i] << " ";
-    }
-    delete[]mas;
-    return 0;
+int main() 
+{ 
+unsigned int n; 
+int *mas; 
+if (cin >> n){ mas = new int [n];} 
+else { cout<<"error"<<endl; 
+return -1; 
+} 
+cin.get(); 
+string stroka; 
+getline (cin, stroka); 
+istringstream stream (stroka); 
+for (unsigned int i=0; i<n;i++){ 
+if(!(stream >> mas[i])){ 
+cout<<"ERROR"<<endl; 
+delete[]mas; 
+return -1; 
+} 
+} 
+insertion_sort (mas,n); 
+for(unsigned int i=0; i<n; i++){ 
+cout << mas[i] << " "; 
+} 
+delete[]mas; 
+return 0; 
 }
